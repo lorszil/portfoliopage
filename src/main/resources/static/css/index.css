@@ -1,0 +1,265 @@
+/*
+!* HTML5 display-role reset for older browsers *!
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font:300 24px/1.5 'Source Sans Pro', arial, helvetica, sans-serif;
+@media (min-width:32rem) {
+    padding-bottom:10rem;
+}
+
+p {
+    font-size:18px;
+@media (min-width:32rem) {
+    font-size:1em;
+}
+
+$wisp:#FFF3F8;
+$heavymetalreflective:#7A7577;
+
+.site-header {
+    padding:10rem 0;
+.container {
+    text-align:center;
+    padding:1rem 0;
+}
+h1 + p {
+    margin-top:0.66rem;
+}
+p + h1 {
+    margin-top:0.66rem;
+}
+}
+.opacity0 {
+    opacity:0;
+}
+.gradient {
+    background:$wisp;
+    transition:background 600ms ease-in-out;
+&.gradient1 {
+ // purple
+ background:#FCF6FF;
+ }
+&.gradient2 {
+ //blue
+ background:#F4FBFF;
+ }
+&.gradient3 {
+ //green
+ background:#F4FFF4;
+ }
+&.gradient4 {
+ //yellow
+ background:#FFFCF4;
+ }
+&.gradient5 {
+     background:$wisp;
+ }
+}
+.container {
+    max-width:60rem;
+    margin:0 auto;
+    padding:0 1rem;
+    text-align:center;
+@media (min-width:32rem) {
+    text-align:left;
+}
+}
+h1 {
+    font:2.4rem/1.2 'PT Serif', georgia, serif;
+}
+h1, p, h2, h3, h4, .caption, .site-header, .row {
+& + * {
+        margin-top:2rem;
+    }
+}
+.columns {
+& + * {
+        margin-top:2rem;
+@media (min-width:32rem) {
+    margin-top:0;
+}
+}
+}
+section {
+    padding:2rem 0;
+}
+p {
+    color:$heavymetalreflective;
+}
+.heart {
+    transform:translateY(2rem) scale(0);
+    transition:transform 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+&.animated {
+     transform:translateY(0) scale(1);
+ }
+&.opacity0 {
+     opacity:1;
+ }
+}
+.site-header h1 {
+    opacity:0;
+    transition:opacity 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform:translateY(-1rem);
+&.animated {
+     opacity:1;
+     transform:translateY(0);
+ }
+}
+.lede {
+    opacity:0;
+    transition:300ms opacity 1s ease-in-out;
+&.animated {
+     opacity:2;
+ }
+}
+h2 {
+    background:$wisp;
+    width:100%;
+    padding:10rem 1rem;
+    font:1.75rem/1.2 'PT Serif', georgia, serif;
+    text-align:center;
+}
+h3 {
+    font:1.75rem/1.2 'PT Serif', georgia, serif;
+}
+h4 {
+    color:#7A7577;
+    text-align:center;
+    font:1.5rem/1.2 'PT Serif', georgia, serif;
+}
+a {
+    text-decoration:none;
+    color:#F897B8;
+    transition:color 150ms ease-in-out;
+    font-family:'PT Serif', georgia, serif;
+&:hover, &:active {
+              color:darken(#F897B8, 10%);
+          }
+}
+.browser {
+    background: url("https://sundaygrind.com/browser.png") top no-repeat;
+    background-size: 100% auto;
+    padding-top: calc(100% * 0.046);
+}
+h2, .caption, h3, .row, .letsgo {
+    transition:transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 750ms ease-in-out;
+    transform:translateY(4rem);
+&.animated {
+     opacity:1;
+     transform:translateY(0);
+ }
+}
+.style-tile {
+    background: url("borders.png") top no-repeat;
+    background-size: 100% 100%;
+    padding: 1.5rem 1rem; }
+
+@media (min-width:32rem) {
+    h2 {
+        max-width:24rem;
+    }
+    .me {
+        max-width:24rem;
+        float:right;
+        margin-top:16rem;
+    }
+    .tarot {
+        max-width:24rem;
+        float:right;
+        margin-top:-12rem;
+    }
+    .chiqui {
+        max-width:24rem;
+        float:left;
+    }
+    .hello {
+        margin-top:3rem;
+        float:left;
+    }
+    .ilove {
+        clear:both;
+        max-width:31rem;
+        position:relative;
+        top:-9rem;
+    }
+    .teaching {
+        max-width:24rem;
+        float:right;
+        text-align:right;
+    }
+    .usual {
+        max-width:31rem;
+        float:right;
+        margin-top:12rem;
+        text-align:right;
+    }
+    .workplay {
+        clear:both;
+        margin-top:8rem;
+        float:left;
+        max-width:31rem;
+    }
+    .thework {
+        margin-top:9rem;
+        float:left;
+    }
+    #site {
+        clear:both;
+    }
+    .savvyroo {
+        margin-top:6rem;
+    }
+    .workforyou {
+    }
+    .letsgo {
+        margin-top:-14rem;
+        float:right;
+        max-width:24rem;
+        text-align:right;
+    }
+}
+.container:before,
+.container:after {
+    content: " ";
+    display: table;
+}
+.container:after {
+    clear: both;
+}
+!**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ *!
+.container {
+    *zoom: 1;
+}*/
