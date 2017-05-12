@@ -15,7 +15,7 @@ lorszil.config(['$routeProvider',
                 templateUrl: 'views/project.html',
                 controller: 'projectCtrl'
             })
-            .when('/adminlogin', {
+            .when('/login', {
                 templateUrl: 'views/login.html',
                 controller: 'loginCtrl'
             })
