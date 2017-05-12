@@ -37,13 +37,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/**").hasAuthority(Roles.ADMIN.toString())
                 .antMatchers("/", "/blog").permitAll()
                 .and()
-                .formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/admin/dashboard")
+                .formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/admin")
                 .and()
                 .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/").deleteCookies("JSESSIONID")
                 .permitAll()
                 .and()
                 .exceptionHandling();
+
+
     }
 
     @Autowired
