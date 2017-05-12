@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="lorszil">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
     <meta charset="UTF-8"/>
@@ -20,7 +20,7 @@
     <title>lorszil</title>
 
 </head>
-<body>
+<body ng-app="lorszil">
 
 <!--<div class="wrap">
     &lt;!&ndash; logo &ndash;&gt;
@@ -47,6 +47,7 @@
             <li ng-show="currentPath == '/'" class="ng-cloak navbar-link"><a href="#portfolio">Portfolio</a></li>
             <li ng-show="currentPath == '/'" class="ng-cloak navbar-link"><a href="#contactme">Contact me</a></li>
             <li class="navbar-link"><a href="/blog">Blog</a></li>
+            <li ng-show="authenticated"><a href="" ng-click="logout()">logout</a></li>
 
         </ul>
     </nav>
@@ -64,10 +65,11 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
 
 
-<script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="/js/lorszil.js"></script>
 
 
 <!--AngularJS Controller-->
+<script type="text/javascript" src="/js/controller/routeController.js"></script>
 <script type="text/javascript" src="/js/controller/menuController.js"></script>
 <script type="text/javascript" src="/js/controller/blogController.js"></script>
 <script type="text/javascript" src="/js/controller/mainController.js"></script>
