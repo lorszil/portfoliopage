@@ -1,6 +1,6 @@
 'use strict';
 
-var lorszil = angular.module('lorszil', ['ngRoute'])
+var lorszil = angular.module('lorszil', ['ngRoute', "xeditable"])
 
     .config(['$httpProvider', '$locationProvider',
         function ($httpProvider, $locationProvider) {
