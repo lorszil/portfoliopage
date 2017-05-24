@@ -14,7 +14,7 @@ public class AdminController extends AbstractController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String mainUI() {
-        return "admin";
+        return "index";
     }
 
 
