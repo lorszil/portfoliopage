@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family:"Quicksand", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 html, body
@@ -141,4 +142,12 @@ h1, h2, h3, h4, h5 {
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+.project
+{
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    border: 5px #5d5a63;
+}
 
