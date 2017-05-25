@@ -1,45 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="Lorszil Portfolio Page" />
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
 
-<body class="login-form">
+    <base href="/"/>
 
-<h2>Login Form</h2>
 
-<div id="login" ng-controller="menuCtrl">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6"><p id="formError" style="text-align: center" hidden="hidden"></p></div>
-        <div class="col-md-3"></div>
+    <link rel="stylesheet" type="text/css" href="/css/login.css"/>
+
+    <title>lorszil</title>
+
+</head>
+<body>
+
+    <div class="login-block" ng-controller="menuCtrl">
+        <h2 class="login-mainText">LOGIN</h2>
+        <form action="/login" method="post" class="login-form" ng-submit="menuCtrl.login()">
+
+            <div class="login__row">
+                <svg class="login-icon name svg-icon" viewBox="0 0 20 20">
+                    <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+                </svg>
+                <input id="loginEmail" class="login-input name" name="username" placeholder="username" required="required"/>
+            </div>
+            <div class="login__row">
+                <svg class="login-icon pass svg-icon" viewBox="0 0 20 20">
+                    <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+                </svg>
+                <input id="loginPassword" class="login-input pass" type="password" name="password" placeholder="password" required="required"/>
+            </div>
+
+            <div>
+                <input type="submit" class="login-submit" id="loginBtn" value="LOGIN"/>
+            </div>
+        </form>
     </div>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4" id="loginBg">
-            <br/>
-            <br/>
-            <form action="/login" method="post" class="form-horizontal" ng-submit="menuCtrl.login()">
-                <div class="form group">
-                    <label for="loginEmail">EMAIL</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                        <input id="loginEmail" class="form-control" name="username" placeholder="email@example.com"
-                        />
-                    </div>
-                </div>
-                <div class="form group">
-                    <br/>
-                    <label>PASSWORD</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                        <input class="form-control" type="password" name="password" required="required"/>
-                    </div>
-                </div>
-                <br/>
-                <br/>
-                <div class="buttonDiv">
-                    <div class="col-md-6" id="loginBtnDiv"><input type="submit" class="btn btn-lg btn-block" id="loginBtn" value="LOGIN"/></div>
-                </div>
-            </form>
-            <br/>
-            <br/>
-        </div>
-        <div class="col-md-4"></div>
-    </div>
+
 </div>
+
+</body>
+</html>
