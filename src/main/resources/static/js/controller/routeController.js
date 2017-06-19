@@ -40,6 +40,14 @@ lorszil.config(['$routeProvider',
                 templateUrl: 'views/admin/project_edit.html',
                 controller: 'projectEditCtrl'
             })
+            .when('/admin/project_dashboard', {
+                templateUrl: 'views/admin/project_dashboard.html',
+                controller: 'projectsCtrl'
+            })
+            .when('/admin/createproject', {
+                templateUrl: 'views/admin/create_project.html',
+                controller: 'projectCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             })
