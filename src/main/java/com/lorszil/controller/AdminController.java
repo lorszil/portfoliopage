@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AdminController extends AbstractController {
 
 
-
     @RequestMapping(method = RequestMethod.GET)
     public String mainUI() {
         return "index";
     }
 
 
-    /*@RequestMapping(value = "/projects", method = RequestMethod.GET)
-    public String listUsers(Model model) {
-        model.addAttribute("projects", userService.getAllUsers());
+    @RequestMapping(value = "/projects", method = RequestMethod.GET)
+    public String listProjects(Model model) {
+        model.addAttribute("projects", projectRepository.findAll());
         return "admin/admin_projects";
-    }*/
+    }
+
 
 }
