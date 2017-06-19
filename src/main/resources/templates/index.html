@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.7.1/css/xeditable.min.css" />
 
     <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/projectsdashboard.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/admin.css"/>
+
 
 
     <title>lorszil</title>
@@ -25,10 +28,10 @@
 <body ng-app="lorszil">
 
 
-<div class="navbar col-8">
+<div>
     <!-- logo -->
     <!--<a href="#!"><img class="logo" src="images/logo.png" /></a>-->
-    <nav>
+    <nav class="navbar bar">
         <ul ng-controller="menuCtrl" class="ng-cloak">
             <!-- navigation menu -->
             <li class="navbar-link"><a href="/">Home</a></li>
@@ -38,12 +41,12 @@
             <li class="navbar-link"><a href="/blog">Blog</a></li>
             <li ng-show="authenticated" class="navbar-link"><a href="/admin">Admin</a></li>
             <li ng-controller="logoutCtlr" ng-show="authenticated" class="navbar-link"><a href="/" ng-click="logout()">logout</a></li>
-            <li ng-show="authenticated" class="navbar-link"><a href="/projects">Projects</a></li>
+            <li ng-show="authenticated" class="navbar-link"><a href="/admin/project_dashboard">Projects</a></li>
         </ul>
     </nav>
 </div>
 
-<div ng-view="ng-view"></div>
+<div ng-view="ng-view" class="onepage"></div>
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -60,13 +63,19 @@
 
 <!--AngularJS Controller-->
 <script type="text/javascript" src="/js/controller/routeController.js"></script>
-<script type="text/javascript" src="/js/controller/logoutController.js"></script>
 <script type="text/javascript" src="/js/controller/menuController.js"></script>
+
+<script type="text/javascript" src="/js/controller/logoutController.js"></script>
 <script type="text/javascript" src="/js/controller/blogController.js"></script>
 <script type="text/javascript" src="/js/controller/mainController.js"></script>
 <script type="text/javascript" src="/js/controller/projectController.js"></script>
+
 <script type="text/javascript" src="/js/controller/admin/adminMainController.js"></script>
 <script type="text/javascript" src="/js/controller/admin/projectEditController.js"></script>
+<script type="text/javascript" src="/js/controller/admin/projectController.js"></script>
+<script type="text/javascript" src="/js/controller/admin/projectsController.js"></script>
+
+
 
 
 </body>
