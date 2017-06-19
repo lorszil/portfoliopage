@@ -7,10 +7,10 @@ lorszil.run(function(editableOptions) {
 lorszil.controller('projectCtrl', function($scope) {
     $scope.message = 'Hello from ProjectController';
 
-    $scope.projectTitle = {
-        name: 'Good one'
+    $scope.project = {
+        title: 'Good one',
+        description: 'Story about it'
     };
-
 
     $scope.project = {};
     $scope.errorConfirm = false;
