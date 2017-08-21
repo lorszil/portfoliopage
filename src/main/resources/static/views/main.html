@@ -1,23 +1,37 @@
 
 
-<div class="onepage">
+<div>
 
-    <div class="home cover col-7" type="text/ng-template" id="home">
-        <h1>Hi! My name is Szilvi. Designer and Photographer.</h1>
+    <div>
+
+        <div class="home cover col-7 onepage" type="text/ng-template" id="home">
+            <h1>Hi! My name is Szilvi. I'm a freelance developer, designer and photographer. Based in Budapest.</h1>
+        </div>
+
+
+        <div type="text/ng-template" id="about">
+
+            <div class="col-2 about-image span_3_of_11"><img class="about-img" src="/images/about-pic.jpg" alt="lorszil" width="250" height="250"></div>
+
+            <div class="col span_4_of_11 about-text"><h4 class="about-h4">A digital nomad who have passion for what I do. Feel free to contact me!</h4></div>
+
+            <div><h5></h5></div>
+
+
+        </div>
+
     </div>
 
 
-    <div type="text/ng-template" id="about">
-        <h3>About</h3>
-    </div>
+    <div class="onepage" id="portfolio">
+        <div class="project" ng-repeat="project in projects">
+
+            <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" ng-attr="src='/imgages/project' + ${prod.id} + '.png'" alt="" />
 
 
-    <div class="project" ng-repeat="project in projects">
+            <section id="projectTitle" class="projectTitle"><li class="">{{project.title}}</li></section>
 
-        <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" ng-attr="src='/imgages/project' + ${prod.id} + '.png'" alt="" />
-
-
-        <section id="projectTitle" class="projectTitle"><li class="">{{project.title}}</li></section>
+        </div>
 
     </div>
 
