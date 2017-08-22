@@ -29,13 +29,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
 
-
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests()
                 .antMatchers("/admin/**").hasAuthority(Roles.ADMIN.toString())
-                .antMatchers("/", "/blog", "/js/**", "/css/**", "/images/**", "/views/**").permitAll()
+                .antMatchers("/", "/blog", "/all_projects", "/allProject", "/js/**", "/css/**", "/images/**", "/views/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/login").permitAll().defaultSuccessUrl("/admin")

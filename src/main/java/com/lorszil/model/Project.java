@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "`project`")
+@Table(name = "`projects`")
 @Data
 @ToString(exclude = {"token"})
 public class Project {

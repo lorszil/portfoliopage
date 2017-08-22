@@ -23,13 +23,13 @@
     </div>
 
 
-    <div class="onepage" id="portfolio">
+    <div class="onepage" id="portfolio" ng-controller="projectsCtrl">
         <div class="project" ng-repeat="project in projects">
 
             <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" ng-attr="src='/imgages/project' + ${prod.id} + '.png'" alt="" />
 
 
-            <section id="projectTitle" class="projectTitle"><li class="">{{project.title}}</li></section>
+            <section id="projectTitle" class="projectTitle" ><li class="" placeholder="Project title">{{project.title}}</li></section>
 
         </div>
 

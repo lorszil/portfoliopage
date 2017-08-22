@@ -7,10 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import sun.net.www.MimeTable;
 
 import org.slf4j.Logger;
@@ -26,7 +23,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Controller
+@RestController
 public class ProjectController extends AbstractController {
 
     private static final Logger logger = LoggerFactory.getLogger(ProjectController.class);
@@ -92,7 +89,7 @@ public class ProjectController extends AbstractController {
 
 
 
-    @RequestMapping(value = "/projects", method = RequestMethod.GET)
+    @RequestMapping(value = "/all_projects", method = RequestMethod.GET)
     @ResponseBody
     public String collectProjects(Principal principal) {
         logger.info("/projects route called - method: {}.", RequestMethod.GET);
@@ -104,6 +101,11 @@ public class ProjectController extends AbstractController {
             logger.error("{} occurred while collecting projects to json: {}", e.getCause(), e.getMessage());
         }
         return projects.toString();
+    }
+
+    @GetMapping(value = "/allProject")
+    public List<Project> getAllProject(){
+        return projectRepository.findAll();
     }
 
     private JSONArray getAllProjects(Principal principal) {

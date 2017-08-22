@@ -15,4 +15,3 @@ var lorszil = angular.module('lorszil', ['ngRoute', "xeditable"])
                 .hashPrefix('!');
 
         }]);
-
